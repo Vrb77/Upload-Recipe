@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;background-color: lightblue; }
+form {border: 3px solid #f1f1f1;width: 25%;padding-left: 2%;
+padding-top: 2%;padding-bottom: 2%; background-color: pink; font-size: 20px;}
+
+
+</style>
+</head>
+<body>
+
+<center>
+<h1>New Comment</h1>
+
+<%= render 'form', comment: @comment %>
+
+<%= link_to 'Back', comments_path %>
+</center>
+</body>
+</html>

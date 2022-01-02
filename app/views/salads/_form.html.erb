@@ -1,0 +1,37 @@
+<%= form_with(model: salad) do |form| %>
+  <% if salad.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(salad.errors.count, "error") %> prohibited this salad from being saved:</h2>
+
+      <ul>
+        <% salad.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :rname %>
+    <%= form.text_field :rname %>
+  </div>
+
+<div class="field">
+  <%= form.label :image %>
+  <%= form.file_field :image %>
+</div>
+
+  <div class="field">
+    <%= form.label :ingredient %>
+    <%= form.text_area :ingredient %>
+  </div>
+
+  <div class="field">
+    <%= form.label :Recipe %>
+    <%= form.text_area :method %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

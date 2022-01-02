@@ -1,0 +1,155 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Recipes</title>
+    <style type="text/css">
+     .abc{
+     
+      margin-left:750px
+     }
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   background-color: black;
+   color: white;
+   text-align: center;
+}
+    </style>
+  </head>
+  <body style="background-color: #eeeeee;">
+
+  <nav class="navbar navbar-dark bg-dark">
+
+  
+
+<ul class="nav nav-pills lg-3" id="pills-tab" role="tablist">
+  <li class="nav-item">
+    <a class="navbar-brand" href="#">
+ 
+    <%= image_tag "plate1.png" , style: ' width:10%;' %> Delicious Recipes!
+  </a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" id="pills-home-tab" data-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+  </li>
+  <!--<li class="nav-item">
+    <a class="nav-link" id="pills-profile-tab" data-toggle="pill" href="#pills-profile" role="tab" aria-controls="pills-profile" aria-selected="false">Profile</a>
+  </li>-->
+  <li class="nav-item">
+    <a class="nav-link" id="pills-contact-tab" data-toggle="pill" href="#pills-contact" role="tab" aria-controls="pills-contact" aria-selected="false">Contact Us</a>
+  </li>
+   
+<li class="nav-item dropdown" >
+    <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Recipes</a>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" href="#"><%= link_to "Dessert ", controller: "desserts", action: 'index' %></a>
+      <a class="dropdown-item" href="#"><%= link_to "snack ", controller: "snacks", action: 'index' %></a>
+      <a class="dropdown-item" href="#"><%= link_to "Drink ", controller: "drinks", action: 'index' %></a>
+      
+      <a class="dropdown-item" href="#"><%= link_to "salad ", controller: "salads", action: 'index' %></a>
+    </div>
+  </li>
+
+     <li class="abc">
+    <button type="button" class="btn btn-danger"> <%= link_to "Log Out ", controller: "sessions", action: 'destroy' %></button>
+</li>
+</ul>
+
+</nav>
+
+
+
+<div class="tab-content" id="pills-tabContent">
+
+  <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+
+<h1>Recipes</h1>
+<center>
+<button type="button" class="btn btn-info"><%= link_to "Dessert ", controller: "desserts", action: 'index' %> </button>&emsp;&emsp;&emsp;&emsp;&emsp;
+<button type="button" class="btn btn-warning"><%= link_to "snack ", controller: "snacks", action: 'index' %> </button>&emsp;&emsp;&emsp;&emsp;&emsp;
+<button type="button" class="btn btn-danger"><%= link_to "Drink ", controller: "drinks", action: 'index' %></button>&emsp;&emsp;&emsp;&emsp;&emsp;
+<button type="button" class="btn btn-success"><%= link_to "salad ", controller: "salads", action: 'index' %></button>
+</center>
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= image_tag "french_fries.jpg" , style: 'height:600px; width:100%;' %>
+    </div>
+    <div class="carousel-item">
+     <%= image_tag "soup.jpg" , style: 'height:600px; width:100%;'%>
+    </div>
+    <div class="carousel-item">
+     <%= image_tag "pizza2.jpg" , style: 'height:600px; width:100%;'%>
+    </div>
+    <div class="carousel-item">
+     <%= image_tag "noodles2.jpg" , style: 'height:600px; width:100%;'%>
+    </div>
+  </div>
+  
+</div>
+
+<h1>New Comment</h1>
+
+<%= link_to "Add New Comment ", controller: "comments", action: 'new',class: "action new" %>
+
+
+ 
+
+</div>
+  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">.p..</div>
+  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab">
+    <h1>Contact Form </h1><br> <h2>Click Here &#128071;</h2><h1><%= link_to "contact form link", controller: "contacts", action: 'new',class: "action new" %></h1></div>
+</div>
+
+<pre>
+  
+
+
+
+
+
+</pre>
+<div class="footer">
+  <div class="row">
+    <div class="col-6">
+      <h4>Get the app</h4><a href="https://play.google.com"><%= image_tag "ps3.png" , style: 'width:15%;' %></a><br>
+      <a href="https://www.apple.com"><%= image_tag "ps4.png" , style: 'width:15%;' %></a>
+    </div>
+    <div class="col-6">
+      <h4>Follow us on:</h4>
+     <a href="https://www.facebook.com"> <%= image_tag "facebook1.png" , style: 'width:5%;' %></a>
+     <a href="https://www.instagram.com"> <%= image_tag "insta1.png" , style: 'width:5%;' %></a>
+      <a href="https://twitter.com"><%= image_tag "twitter1.png" , style: 'width:5%;' %></a><br>
+      contact us: contact@deliciousrecipe.com
+    </div>
+  </div>
+  <p>copyright@1521-Delicious Recipes!</p>
+
+</div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  </body>
+</html>
+

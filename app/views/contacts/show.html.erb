@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {font-family: Arial, Helvetica, sans-serif;background-color: lightblue; }
+
+
+</style>
+</head>
+<body>
+
+<center>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @contact.name %>
+</p>
+
+<p>
+  <strong>Mail:</strong>
+  <%= @contact.mail %>
+</p>
+
+<p>
+  <strong>Mno:</strong>
+  <%= @contact.mno %>
+</p>
+
+<p>
+  <strong>Any Msg:</strong>
+  <%= @contact.desp %>
+</p>
+
+<%= link_to 'Edit', edit_contact_path(@contact) %> |
+<%= link_to 'Back', contacts_path %>
+
+</center>
+</body>
+</html>

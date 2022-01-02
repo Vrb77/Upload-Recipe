@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style type="text/css">
+    center{
+        padding-top: 15%;
+    }
+</style>
+</head>
+<body style="background-color: lightcyan;">
+    <h1><center>
+<% if current_user %>
+ Logged in as <%= current_user.email %>.
+ <%= link_to 'Log Out', logout_path %>
+<% else %>
+ <%= link_to 'Sign Up', signup_path %><br><br><p></p> or<br><br>
+ <%= link_to 'Log In', login_path %>
+<% end %>
+<p id='notice'><%= notice %></p>
+
+</center>
+</h1>
+</body>
+</html>
